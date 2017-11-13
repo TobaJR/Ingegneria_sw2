@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
   def hello
     render html: "hello world"
     render html: "ciao ho aggiunto anche questo"
-    render html: "e anche questo"
+    render html: "e anche questo" #ehi
   end
 end
