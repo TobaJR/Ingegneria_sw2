@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :invoices
-  resources :clients
+  resources :clients 
+      resources :invoices
 end

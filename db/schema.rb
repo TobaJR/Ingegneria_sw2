@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 20171114001436) do
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
-    t.decimal "age"
-    t.decimal "hours"
+    t.integer "age"
+    t.integer "hours"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20171114001436) do
     t.integer "total_money"
     t.string "note"
     t.date "date"
-    t.string "IDclient"
+    t.integer "IDclient"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

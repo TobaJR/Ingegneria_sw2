@@ -5,8 +5,7 @@ class CreateInvoices < ActiveRecord::Migration[5.1]
       t.integer :total_money
       t.string :note
       t.date :date
-      t.string :IDclient
-
+      t.integer :IDclient
       t.timestamps
     end
   end
