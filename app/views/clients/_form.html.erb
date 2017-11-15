@@ -13,30 +13,31 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :client_name %>
+    <%= form.text_field :name, id: :client_name, :class=> "form-control", :placeholder=> "First name" %>
   </div>
 
   <div class="field">
     <%= form.label :surname %>
-    <%= form.text_field :surname, id: :client_surname %>
+    <%= form.text_field :surname, id: :client_surname, :class=> "form-control", :placeholder=> "Last name" %>
   </div>
 
   <div class="field">
     <%= form.label :age %>
-    <%= form.text_field :age, id: :client_age %>
+    <%= form.text_field :age, id: :client_age, :class=> "form-control", :placeholder=> "18"%>
   </div>
 
   <div class="field">
     <%= form.label :hours %>
-    <%= form.text_field :hours, id: :client_hours %>
+    <%= form.text_field :hours, id: :client_hours, :class=> "form-control", :placeholder=> "50"%>
   </div>
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_field :email, id: :client_email %>
+    <%= form.text_field :email, id: :client_email, :class=> "form-control", :placeholder=> "FirstName@gmail.com"%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class=>"btn btn-primary" %>
   </div>
+
 <% end %>

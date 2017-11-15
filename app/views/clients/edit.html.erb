@@ -1,6 +1,19 @@
-<h1>Editing Client</h1>
 
-<%= render 'form', client: @client %>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <p class = "logo"> billing system </p>
+    <nav>
+      <ul class="nav navbar-nav pull-right">
+        <li><%= link_to 'Back', clients_path %></li>
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+    </nav>
+  </div>
+<div class="center jumbotron">
+  <h1>Editing Client</h1>
 
-<%= link_to 'Show', @client %> |
-<%= link_to 'Back', clients_path %>
+  <%= render 'form', client: @client %>
+</div>
+<div class="footer">
+  <h3> Show </h3>
+</div>

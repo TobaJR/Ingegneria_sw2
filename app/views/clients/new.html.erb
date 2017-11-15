@@ -1,5 +1,17 @@
-<h1>New Client</h1>
-
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <p class = "logo"> billing system </p>
+    <nav>
+      <ul class="nav navbar-nav pull-right">
+        <li><%= link_to 'Back', clients_path %></li>
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+    </nav>
+  </div>
+<div class="center jumbotron">
+  <h1>New Client</h1>
 <%= render 'form', client: @client %>
-
-<%= link_to 'Back', clients_path %>
+</div>
+<div class="footer">
+  <h3> Sample app </h3>
+</div>

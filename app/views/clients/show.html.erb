@@ -1,29 +1,42 @@
 <p id="notice"><%= notice %></p>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <p class = "logo"> billing system </p>
+    <nav>
+      <ul class="nav navbar-nav pull-right">
+        <li><%= link_to 'Edit', edit_client_path(@client) %></li>
+        <li><%= link_to 'Back', clients_path %></li>
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+    </nav>
+  </div>
+<div class="center jumbotron">
+  <p>
+    <strong>Name:</strong>
+    <%= @client.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @client.name %>
-</p>
+  <p>
+    <strong>Surname:</strong>
+    <%= @client.surname %>
+  </p>
 
-<p>
-  <strong>Surname:</strong>
-  <%= @client.surname %>
-</p>
+  <p>
+    <strong>Age:</strong>
+    <%= @client.age %>
+  </p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @client.age %>
-</p>
+  <p>
+    <strong>Hours:</strong>
+    <%= @client.hours %>
+  </p>
 
-<p>
-  <strong>Hours:</strong>
-  <%= @client.hours %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @client.email %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @client.email %>
-</p>
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+</div>
+<div class="footer">
+  <h3> Show </h3>
+</div>
