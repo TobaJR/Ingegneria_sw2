@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <p class = "logo"> billing system </p>
+    <nav>
+      <ul class="nav navbar-nav pull-right">
+        <li> <%= link_to 'Edit', edit_client_work_path(@work.client, @work) %> </li>
+        <li> <%= link_to 'Back', client_path(@work.client) %>  </li>
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+    </nav>
+  </div>
+<div class="center jumbotron">
+<p>
+  <strong>ID client:</strong>
+  <%= @work.client_id %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @work.note %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @work.hours %>
+</p>
+</div>
+<div class="footer">
+  <h3> Show </h3>
+</div>

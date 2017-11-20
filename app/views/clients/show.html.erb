@@ -35,8 +35,15 @@
     <strong>Email:</strong>
     <%= @client.email %>
   </p>
+  <br>
+  <h4 class = "works">Works of <%= @client.name %> <%=@client.surname%> </h4>
+  
+  <%= render 'works/index', works: @client.works %>
+  <%= link_to 'New Work', new_client_work_path(@client) %>
 
 </div>
+
+
 <div class="footer">
   <h3> Show </h3>
 </div>

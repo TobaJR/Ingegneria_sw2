@@ -1,0 +1,24 @@
+<%= simple_form_for [@client, work] do |f| %>
+  <% if work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% work.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :note, :class=> "form-control"%>
+  <br>
+  <%= f.input :hours,:class=> "form-control" %>
+  <br>
+  <%= f.association :client, include_blank: false, :class=>"dropdown show" %>
+  <br>
+  <br> <br>
+  <%= f.input :billed, as: :radio_buttons, :disabled => "true", :checked => "false"%>
+  <br>
+  <%= f.button :submit, :class=>"btn btn-success btn-sm"%>
+<% end %>

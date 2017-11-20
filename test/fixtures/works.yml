@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clients: 
+  note: MyString
+  hours: 1
+
+two:
+  clients: 
+  note: MyString
+  hours: 1

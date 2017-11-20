@@ -34,9 +34,10 @@
         <td scope = "row"><%= client.hours %></td>
         <td scope = "row"><%= client.email %></td>
         <td scope = "row"><% %></td>
-        <td><%= link_to 'Show', client %></td>
-        <td><%= link_to 'Edit', edit_client_path(client) %></td>
-        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'show', client, :class=>"btn btn-success btn-sm"  %></td>
+
+        <td><%= link_to 'Edit', edit_client_path(client), :class=>"btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Destroy', client, :class=>"btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

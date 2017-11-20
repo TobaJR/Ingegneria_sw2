@@ -1,0 +1,13 @@
+  <tr>
+    <td scope = "row"><%= work.client_id %></td>
+    <td scope = "row"><%= work.note %></td>
+    <td scope = "row"><%= work.hours %></td>
+    <% if (work.billed == true) %>
+    <td scope = "row"><span class="glyphicon glyphicon-ok"></span></td>
+    <% else %>
+    <td scope = "row"><span class="glyphicon glyphicon-remove"></span></td>
+    <% end %>>
+    <td><%= link_to 'show', client_work_path(work.client, work),  :class=>"btn btn-success btn-sm"%></td>
+    <td><%= link_to 'Edit', edit_client_work_path(work.client, work),  :class=>"btn btn-primary btn-sm"%></td>
+    <td><%= link_to 'Destroy', client_work_path(work.client, work), method: :delete, data: { confirm: 'Are you sure?' },  :class=>"btn btn-danger btn-sm"%></td>
+  </tr>

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <p class = "logo"> billing system </p>
+    <nav>
+      <ul class="nav navbar-nav pull-right">
+        <li> <%= link_to 'Back', client_path(@client)%> </li>
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+    </nav>
+  </div>
+<div class="center jumbotron">
+  <h1> Works </h1>
+<%= render 'index', works: @works %>
+<%= link_to 'New Work', new_client_work_path(@client) %>
+</div>
+<br>
+
+
+<div class="footer">
+  <h3> Show </h3>
+</div>
