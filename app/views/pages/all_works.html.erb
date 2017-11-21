@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <p class = "logo"> billing system </p>
+    <nav>
+      <ul class="nav navbar-nav pull-right">
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+    </nav>
+  </div>
+<div class="center jumbotron">
+<% @clients.each do |client| %>
+<table class ="table table-striped"  style = "width:1200px">
+<h4 class = "works"> Works of <%= client.name %> <%=client.surname%> payed <%=client.tarif%>€/h</h4>
+<thead>
+  <tr>
+    <th scope = "col"  style = "width:240px">Note</th>
+    <th scope = "col" style = "width:240px">Hours</th>
+    <th scope = "col" style = "width:240px">Total money</th>
+    <th scope = "col" style = "width:240px">Billed</th>
+    <th scope = "col" style = "width:240px">Creation date</th>
+    <th colspan="3"></th>
+  </tr>
+</thead>
+  <% @works.each do |work| %>
+    <% if (work.client_id == client.id)%>
+    <tbody>
+        <tr>
+          <td scope = "row"><%= work.note %></td>
+          <td scope = "row"><%= work.hours %></td>
+          <td scope = "row"><%=  work.money %>€</td>
+          <% if (work.billed == true) %>
+          <td scope = "row"><span class="glyphicon glyphicon-ok"></span></td>
+          <% else %>
+          <td scope = "row"><span class="glyphicon glyphicon-remove"></span></td>
+          <% end %>
+          <td scope = "row"><%= work.created_at %></td>
+        </tr>
+      </tbody>
+
+      <% end %>
+
+  <% end %>
+
+</table>
+<% end %>
+
+
+
+</div>
+<div class="footer">
+  <h3> Sample app </h3>
+</div>

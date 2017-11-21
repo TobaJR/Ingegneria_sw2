@@ -36,7 +36,6 @@ class WorksController < ApplicationController
   # POST /works.json
   def create
     @work = @client.works.build(work_params)
-    @work.update_attribute(:money, @work.hours * @client.tarif)
 
     respond_to do |format|
       if @work.save
@@ -53,7 +52,6 @@ class WorksController < ApplicationController
   # PATCH/PUT /works/1.json
   def update
     respond_to do |format|
-      @work.update_attribute(:money, @work.hours * @client.tarif)
       if @work.update(work_param_update)
         format.html { redirect_to client_path(@client), notice: 'Work was successfully updated.' }
         format.json { render :show, status: :ok, location: @work }
@@ -86,7 +84,7 @@ class WorksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_params
-      params.require(:work).permit(:client_id, :note, :hours, :billed)
+      params.require(:work).permit(:client_id, :note, :hours, :billed, :money)
     end
 
     def work_param_update

@@ -2,6 +2,7 @@
     <td scope = "row"><%= work.client_id %></td>
     <td scope = "row"><%= work.note %></td>
     <td scope = "row"><%= work.hours %></td>
+    <% work.update_attribute(:money, (work.hours * @client.tarif)) %>
     <td scope = "row"><%=  work.money %>€</td>
     <% if (work.billed == true) %>
     <td scope = "row"><span class="glyphicon glyphicon-ok"></span></td>

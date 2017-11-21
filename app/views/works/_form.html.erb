@@ -17,6 +17,7 @@
   <br>
   <%= f.association :client, include_blank: false, :class=>"dropdown show" %>
   <br>
+  <%= f.input_field :money, default: '0', hidden: 'true' %> 
   <br>
   <%= f.input :billed, as: :radio_buttons, :disabled => "true", :checked => "false"%>
   <br>
