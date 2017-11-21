@@ -12,6 +12,17 @@ class WorksController < ApplicationController
   def show
   end
 
+  def pay
+    @work = @client.works.find(params[:id])
+    @work.update_attribute(:billed, true)
+    respond_to do |format|
+      format.html { redirect_to client_path(@client), notice: 'Work was successfully payed.' }
+      format.json { render :show, status: :ok, location: @work }
+    end
+  end
+  helper_method :pay
+
+
   # GET /works/new
   def new
     @work = @client.works.build
@@ -25,6 +36,7 @@ class WorksController < ApplicationController
   # POST /works.json
   def create
     @work = @client.works.build(work_params)
+    @work.update_attribute(:money, @work.hours * @client.tarif)
 
     respond_to do |format|
       if @work.save
@@ -41,8 +53,9 @@ class WorksController < ApplicationController
   # PATCH/PUT /works/1.json
   def update
     respond_to do |format|
-      if @work.update(work_params)
-        format.html { redirect_to client_work_path(@client, @work), notice: 'Work was successfully updated.' }
+      @work.update_attribute(:money, @work.hours * @client.tarif)
+      if @work.update(work_param_update)
+        format.html { redirect_to client_path(@client), notice: 'Work was successfully updated.' }
         format.json { render :show, status: :ok, location: @work }
       else
         format.html { render :edit }
@@ -56,7 +69,7 @@ class WorksController < ApplicationController
   def destroy
     @work.destroy
     respond_to do |format|
-      format.html { redirect_to works_url, notice: 'Work was successfully destroyed.' }
+      format.html { redirect_to client_url(@client), notice: 'Work was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -74,5 +87,9 @@ class WorksController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_params
       params.require(:work).permit(:client_id, :note, :hours, :billed)
+    end
+
+    def work_param_update
+      params.require(:work).permit(:client_id, :note, :hours)
     end
 end

@@ -10,28 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119182859) do
+ActiveRecord::Schema.define(version: 20171121001907) do
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.integer "hours"
+    t.integer "tarif"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "surname"
-  end
-
-  create_table "invoices", force: :cascade do |t|
-    t.integer "total_hours"
-    t.integer "total_money"
-    t.string "note"
-    t.date "date"
-    t.integer "IDclient"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "work_id"
-    t.index ["work_id"], name: "index_invoices_on_work_id"
   end
 
   create_table "works", force: :cascade do |t|
@@ -41,6 +29,7 @@ ActiveRecord::Schema.define(version: 20171119182859) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "billed"
+    t.float "money"
     t.index ["client_id"], name: "index_works_on_client_id"
   end
 

@@ -10,6 +10,7 @@
     </nav>
   </div>
 <div class="center jumbotron">
+<h1> Clients: </h1>
 <table class ="table table-striped">
   <thead>
     <tr>
@@ -17,9 +18,14 @@
       <th scope = "col">Name</th>
       <th scope = "col">Surname</th>
       <th scope = "col">Age</th>
-      <th scope = "col">Hours</th>
+      <th scope = "col">tarif</th>
+      <th scope = "col">Total hours</th>
+      <th scope = "col">B. hours</th>
+      <th scope = "col">Unb. Hours</th>
+      <th scope = "col">B. money</th>
+      <th scope = "col">Un. money</th>
       <th scope = "col">Email</th>
-      <th scope = "col">Invoice</th>
+      <th scope = "col">Works</th>
       <th colspan="5"></th>
     </tr>
   </thead>
@@ -31,9 +37,14 @@
         <td scope = "row"><%= client.name %></td>
         <td scope = "row"><%= client.surname %></td>
         <td scope = "row"><%= client.age %></td>
-        <td scope = "row"><%= client.hours %></td>
+        <td scope = "row"><%= client.tarif %> €/h</td>
+        <td scope = "row"><%= client.total_hours %></td>
+        <td scope = "row"  class = "text-success"><%= client.billed_hours %></td>
+        <td scope = "row"  class = "text-danger"><%= client.unbilled_hours %></td>
+        <td scope = "row"  class = "text-success"><%= client.billed_money %> €</td>
+        <td scope = "row"  class = "text-danger"><%= client.unbilled_money %> €</td>
         <td scope = "row"><%= client.email %></td>
-        <td scope = "row"><% %></td>
+        <td scope = "row"><%= client.works.count %></td>
         <td><%= link_to 'show', client, :class=>"btn btn-success btn-sm"  %></td>
 
         <td><%= link_to 'Edit', edit_client_path(client), :class=>"btn btn-primary btn-sm" %></td>

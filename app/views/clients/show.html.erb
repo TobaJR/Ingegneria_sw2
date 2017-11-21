@@ -25,19 +25,13 @@
     <strong>Age:</strong>
     <%= @client.age %>
   </p>
-
-  <p>
-    <strong>Hours:</strong>
-    <%= @client.hours %>
-  </p>
-
   <p>
     <strong>Email:</strong>
     <%= @client.email %>
   </p>
   <br>
-  <h4 class = "works">Works of <%= @client.name %> <%=@client.surname%> </h4>
-  
+  <h4 class = "works">Works of <%= @client.name %> <%=@client.surname%> payed <%=@client.tarif%>€/h</h4>
+
   <%= render 'works/index', works: @client.works %>
   <%= link_to 'New Work', new_client_work_path(@client) %>
 

@@ -48,6 +48,11 @@ class ClientsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @client.errors, status: :unprocessable_entity }
       end
+
+      @client.works.each do |work|
+        work.money = (work.hours * @client.tarif)
+        work.save
+      end
     end
   end
 
@@ -69,6 +74,7 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:name, :surname, :age, :hours, :email)
+      params.require(:client).permit(:name, :surname, :age, :tarif, :email)
     end
+
 end
