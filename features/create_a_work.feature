@@ -5,6 +5,7 @@
   I want to create a new work
 
   Feature: create a client
+  Feature: create a work
 
   Background:
     Given there is a client called 'Massimo Maffei'

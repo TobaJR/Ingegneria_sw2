@@ -4,6 +4,6 @@ FactoryBot.define do
     hours 15
     billed false
     money 0
-    client
+    client 
   end
 end
