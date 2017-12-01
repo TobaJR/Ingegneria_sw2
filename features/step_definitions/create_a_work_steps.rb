@@ -36,20 +36,9 @@ end
    click_on 'Create Work'
  end
 
- Then("I should see an error of work") do
-   expect(page).to have_css('#error_explanation')
- end
-
-
-
  When("I fill in the form with valid data") do
    fill_in 'Note', with: 'ehi'
    fill_in 'Hours', with: 13
 
    click_on 'Create Work'
- end
-
- Then("I should see billed unchecked") do
-   work = Work.last
-   expect(work.billed).to have_content('false')
  end

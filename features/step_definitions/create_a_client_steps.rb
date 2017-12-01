@@ -9,7 +9,7 @@
  end
 
 
- When("I fill in the form with valid Email") do
+ And("I fill in the form with valid Email") do
    fill_in 'Name', with: 'Massimo'
    fill_in 'Surname', with: 'Maffei'
    fill_in 'Tarif', with: 8
@@ -37,6 +37,6 @@
    click_on 'Create Client'
  end
 
- Then("I should see an error of client") do
+ Then("I should see an error") do
    expect(page).to have_css('#error_explanation')
  end

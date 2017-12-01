@@ -1,11 +1,7 @@
-
-  Feature: create a work
-  In order to keep track of works
-  As a user
-  I want to create a new work
-
-  Feature: create a client
-  Feature: create a work
+Feature: create a work
+In order to keep track of works
+As a user
+I want to create a new work
 
   Background:
     Given there is a client called 'Massimo Maffei'
@@ -20,4 +16,4 @@
     Given I am on the list of works of "Massimo Maffei"
     When I click on "New Work"
     And I fill in the form with an invalid Note
-    Then I should see an error of work
+    Then I should see an error
