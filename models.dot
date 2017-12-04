@@ -1,0 +1,7 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true, bgcolor="none"]
+	"Client" [shape=Mrecord, label="{Client|id :INTEGER\lname :varchar\lage :integer\ltarif :integer\lemail :varchar\lcreated_at :datetime\lupdated_at :datetime\lsurname :varchar\l}"]
+	"Work" [shape=Mrecord, label="{Work|id :INTEGER\lclient_id :integer\lnote :varchar\lhours :integer\lcreated_at :datetime\lupdated_at :datetime\lbilled :boolean\lmoney :float\l}"]
+	"ApplicationRecord" []
+	"Client" -> "Work" [arrowtail=odot, arrowhead=crow, dir=both color="#F5314E"]
+}
