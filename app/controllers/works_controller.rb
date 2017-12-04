@@ -88,6 +88,6 @@ class WorksController < ApplicationController
     end
 
     def work_param_update
-      params.require(:work).permit(:client_id, :note, :hours)
+      params.require(:work).permit(:client_id, :note, :hours, :billed)
     end
 end

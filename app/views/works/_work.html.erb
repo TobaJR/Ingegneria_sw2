@@ -10,10 +10,10 @@
     <td scope = "row"><%=  work.money %>€</td>
     <% if (work.billed == true) %>
     <td scope = "row"><span class="glyphicon glyphicon-ok"></span></td>
-    <td></td>
+    <td><%= link_to 'show', client_work_path(work.client, work), :class=>"btn btn-success btn-sm"%></td>
     <% else %>
     <td scope = "row"><span class="glyphicon glyphicon-remove"></span></td>
-    <td><%= link_to 'pay', pay_client_work_path(work.client, work), method: :pay,data: { confirm: 'Are you sure?' }, :class=>"btn btn-success btn-sm"%></td>
+    <td><%= link_to 'pay', pay_client_work_path(work.client, work), method: :pay,data: { confirm: 'Are you sure?' }, :class=>"btn btn-warning btn-sm"%></td>
     <% end %>
 
     <td><%= link_to 'Edit', edit_client_work_path(work.client, work),  :class=>"btn btn-primary btn-sm"%></td>

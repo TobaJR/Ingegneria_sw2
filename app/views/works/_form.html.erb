@@ -11,15 +11,34 @@
     </div>
   <% end %>
 
-  <%= f.input :note, :class=> "form-control"%>
-  <br>
-  <%= f.input :hours,:class=> "form-control" %>
-  <br>
-  <%= f.association :client, include_blank: false, :class=>"dropdown show" %>
-  <br>
-  <%= f.input_field :money, default: '0', hidden: 'true' %> 
-  <br>
-  <%= f.input :billed, as: :radio_buttons, :disabled => "true", :checked => "false"%>
-  <br>
-  <%= f.button :submit, :class=>"btn btn-success btn-sm"%>
+  <%if work.billed == true %>
+
+    <%= f.input :note, :class=> "form-control"%>
+    <br>
+    <%= f.input :hours,:class=> "form-control" %>
+    <br>
+    <%= f.association :client, include_blank: false, :class=>"dropdown show" %>
+    <br>
+    <%= f.input_field :money, default: '0', hidden: 'true' %>
+    <br>
+    <%= f.input :billed, as: :radio_buttons, :checked => "true" %>
+    <br>
+    <%= f.button :submit, :class=>"btn btn-success btn-sm", data: { confirm: 'Are you sure to unpay this work?' }%>
+
+  <%else%>
+
+    <%= f.input :note, :class=> "form-control"%>
+    <br>
+    <%= f.input :hours,:class=> "form-control" %>
+    <br>
+    <%= f.association :client, include_blank: false, :class=>"dropdown show" %>
+    <br>
+    <%= f.input_field :money, default: '0', hidden: 'true' %>
+    <br>
+    <%= f.input :billed, as: :radio_buttons, :checked => "false", :disabled => "true"%>
+    <br>
+    <%= f.button :submit, :class=>"btn btn-success btn-sm"%>
+
+  <% end %>
+
 <% end %>
