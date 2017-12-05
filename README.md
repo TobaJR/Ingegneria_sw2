@@ -14,10 +14,34 @@ Through the use of this application, you are able to:
 - Pay a work using a button
 
 # Database's structure
+```javascript
+ActiveRecord::Schema.define(version: 20171121001907) do
 
+  create_table "clients", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.integer "tarif"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "surname"
+  end
 
+  create_table "works", force: :cascade do |t|
+    t.integer "client_id"
+    t.string "note"
+    t.integer "hours"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "billed"
+    t.float "money"
+    t.index ["client_id"], name: "index_works_on_client_id"
+  end
+
+end
+```
 
 
 # PROJECT DEVELOPERS
-- Andrea Tobaldi @TobaJR 
+- Andrea Tobaldi @TobaJR
 - Maffei Massimo @Maffo97
