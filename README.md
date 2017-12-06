@@ -1,5 +1,5 @@
 # BILLING SYSTEM
-the usefulness of this program is mainly to create a suitable environment for the invoicing of jobs carried out by the employees of a company
+The usefulness of this program is mainly to create a suitable environment for the invoicing of jobs carried out by the employees of a company
 
 # How it works?
 This program was developed using mainly 3 programming languages: Ruby on Rails, SQL and Bootstrap.
@@ -44,6 +44,8 @@ end
  <p align="center">
   <img src="https://github.com/TobaJR/Ingegneria_sw2/blob/master/models.png">
 </p>
+
+We used a batabase to keep track of all customer data and work in a precise and orderly manner,
 
 
 # PROJECT DEVELOPERS
