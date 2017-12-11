@@ -1,9 +1,18 @@
 # BILLING SYSTEM
 The usefulness of this program is mainly to create a suitable environment for the invoicing of jobs carried out by the employees of a company
 
+## The idea of this project
+
+first of all we created User stories, which is the basis of our project. Among the many, the main ones are the insertion of new customers and new invoices and the ability to modify or eliminate those previously created.
+subsequently, we created the basis of our project, the database, which allows us to save all the information related to the program.
+After completing the first implementations, we moved on to the testing phase, adopting a BDD(Behaviour Driven Development) approach. This technique allows us to perform different tests that avoid errors within the program in such a way that results more fluent.
+Finally we focused on the graphic part of the project, trying to create an interface easily understood by all user and using bootstrap we managed to create an intuitive and easy-to-use environment
+
+
 # How it works?
 This program was developed using mainly 3 programming languages: Ruby on Rails, SQL and Bootstrap.
-it is also based on the use of a database that is able to keep track of all the customers with their relative characteristics and the different works carried out by them.
+It is also based on the use of a database that is able to keep track of all the customers with their relative characteristics and the different works carried out by them.
+the main page contains the link that refers to this repository and 2 buttons that allow you to look at the customers and all the jobs included in the database. By pressing the first one, it is possible to view all the information of the clients included in the database and, when necessary, to create new ones by pressing the "New client" button. To show the works of a client, on the other hand, simply press the "show" button and change the information of a client the "Edit" button. To pay a job for a specific customer, simply press the "Pay" button.
 
 # Utilities
 Through the use of this application, you are able to:
@@ -45,7 +54,30 @@ end
   <img src="https://github.com/TobaJR/Ingegneria_sw2/blob/master/models.png">
 </p>
 
-We used a batabase to keep track of all customer data and work in a precise and orderly manner,
+We used a batabase to keep track of all customer data and work in a precise and orderly manner
+
+# How we worked
+
+# LICENSE
+Copyright (c) 1997 Massimo Maffei, Andrea Tobalid
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 
 # PROJECT DEVELOPERS
