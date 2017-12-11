@@ -56,8 +56,6 @@ end
 
 We used a batabase to keep track of all customer data and work in a precise and orderly manner
 
-# How we worked
-
 # LICENSE
 Copyright (c) 1997 Massimo Maffei, Andrea Tobalid
 
