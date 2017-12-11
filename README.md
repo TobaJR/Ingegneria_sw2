@@ -57,7 +57,7 @@ end
 We used a batabase to keep track of all customer data and work in a precise and orderly manner
 
 # LICENSE
-Copyright (c) 1997 Massimo Maffei, Andrea Tobalid
+Copyright (c) 2017 TobaJR
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
